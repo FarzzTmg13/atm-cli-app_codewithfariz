@@ -49,37 +49,38 @@ Aplikasi simulasi mesin ATM berbasis **Command Line Interface (CLI)** yang diban
 4. **Buat Tabel Database**
    ```bash
    -- Tabel accounts
-CREATE TABLE accounts (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    pin VARCHAR(4) NOT NULL,
-    balance DECIMAL(10,2) DEFAULT 0.00,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Tabel transactions
-CREATE TABLE transactions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    account_id INT NOT NULL,
-    type ENUM('deposit', 'withdraw', 'transfer_in', 'transfer_out') NOT NULL,
-    amount DECIMAL(10,2) NOT NULL,
-    target_id INT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (account_id) REFERENCES accounts(id),
-    FOREIGN KEY (target_id) REFERENCES accounts(id)
-);
+   CREATE TABLE accounts (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       name VARCHAR(255) NOT NULL,
+       pin VARCHAR(4) NOT NULL,
+       balance DECIMAL(10,2) DEFAULT 0.00,
+       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
+   
+   -- Tabel transactions
+   CREATE TABLE transactions (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       account_id INT NOT NULL,
+       type ENUM('deposit', 'withdraw', 'transfer_in', 'transfer_out') NOT NULL,
+       amount DECIMAL(10,2) NOT NULL,
+       target_id INT NULL,
+       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+       FOREIGN KEY (account_id) REFERENCES accounts(id),
+       FOREIGN KEY (target_id) REFERENCES accounts(id)
+   );
 
 5. **Konfigurasi koneksi Database**
    - Buka file db.js
-   - Sesuaikan user, password, dan database jika diperlukan
+   - Sesuaikan user, password, dan database jika diperlukan.
+     
    ```bash
    const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',        // ubah jika ada password
-  database: 'backend', // sesuaikan nama database
-  ...
-});
+     host: 'localhost',
+     user: 'root',
+     password: '',        // ubah jika ada password
+     database: 'backend', // sesuaikan nama database
+     ...
+   });
 
 
 **▶️ Cara Penggunaan**
