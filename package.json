@@ -1,0 +1,14 @@
+{
+  "name": "atm-cli-app",
+  "version": "1.0.0",
+  "description": "Simulasi ATM CLI dengan MySQL",
+  "main": "atm.js",
+  "scripts": {
+    "start": "node atm.js"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "inquirer": "^9.2.11",
+    "mysql2": "^3.8.1"
+  }
+}
