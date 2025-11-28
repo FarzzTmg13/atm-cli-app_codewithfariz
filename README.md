@@ -70,7 +70,7 @@ Aplikasii simulasi mesin ATM berbasis **Command Line Interface (CLI)** yang diba
        FOREIGN KEY (target_id) REFERENCES accounts(id)
    );
 
-5. **Konfigurasi koneksi Database**
+5. **Konfigurasi Koneksi Database**
    - Buka file db.js
    - Sesuaikan user, password, dan database jika diperlukan.
      
