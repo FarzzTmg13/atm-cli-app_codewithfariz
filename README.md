@@ -1,4 +1,4 @@
-# Simulasi Mesin ATM CLI by Fariz Husain Alba
+# Simulasi Mesin ATM CLI by Fariz Husain Albar
 ## Follow Instagram: fariz.webdev
 
 Aplikasi simulasi mesin ATM berbasis **Command Line Interface (CLI)** yang dibangun dengan **Node.js** dan **MySQL**. Proyek ini mensimulasikan fungsi dasar ATM seperti registrasi, login, cek saldo, setor tunai, tarik tunai, transfer, dan riwayat transaksi — semua dijalankan melalui terminall.
